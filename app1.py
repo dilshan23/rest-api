@@ -19,6 +19,14 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
+
+@app.route('',methods = ['GET'])
+def root():
+
+    return " no implemetion at root level"
+
+
+
 @app.route('/post', methods=['POST'])
 def post_route():
     if request.method == 'POST':
